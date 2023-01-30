@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'NotoSansThai';
+  font-weight: 400;
+  src: url('/fonts/NotoSansThai-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NotoSansThai';
+  font-weight: 500;
+  src: url('/fonts/NotoSansThai-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NotoSansThai';
+  font-weight: 600;
+  src: url('/fonts/NotoSansThai-SemiBold.ttf') format('truetype');
+}
+
+html,
+body {
+  font-family: 'NotoSansThai';
+  font-size: 14px;
+  background-color: theme('colors.neutral.100');
+  color: theme('colors.neutral.900');
+}

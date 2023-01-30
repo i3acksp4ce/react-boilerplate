@@ -24,8 +24,12 @@ module.exports = {
       jsx: true,
     },
   },
+  settings: {
+    tailwindcss: {
+      callees: ['classnames', 'cx'],
+    },
+  },
   rules: {
-    'no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: 'return' },
@@ -43,6 +47,7 @@ module.exports = {
      */
 
     'react-hooks/exhaustive-deps': 'off',
+    'react/display-name': 'off',
 
     /**
      *
@@ -71,7 +76,7 @@ module.exports = {
       {
         usePrettierrc: true,
         endOfLine: 'auto',
-        printWidth: 100,
+        printWidth: 80,
         tabWidth: 2,
         useTabs: false,
         semi: false,
