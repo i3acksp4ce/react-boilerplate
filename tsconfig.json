@@ -8,20 +8,21 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
     "incremental": true,
 
-    // addition
+    "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
+
+    // addition
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]
     },
     "types": ["node", "unplugin-icons/types/react"]
   },
-  "include": ["src"]
+  "include": ["src/**/*"]
 }

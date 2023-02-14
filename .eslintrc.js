@@ -15,6 +15,8 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
     'plugin:tailwindcss/recommended',
+
+    './.eslintrc-auto-import.json',
   ],
   plugins: ['react', '@typescript-eslint', 'prettier'],
 
@@ -26,7 +28,11 @@ module.exports = {
   },
   settings: {
     tailwindcss: {
-      callees: ['classnames', 'cx'],
+      callees: ['classnames', 'cx', 'tw', 'css'],
+      classRegex: /^(?:className=)?(?:cx\()?(["'])(.*?)\1(?:(?:\))?)$/,
+    },
+    react: {
+      version: 'detect',
     },
   },
   rules: {
@@ -38,7 +44,6 @@ module.exports = {
       { blankLine: 'always', prev: 'multiline-block-like', next: '*' },
       { blankLine: 'always', prev: ['case', 'default'], next: '*' },
     ],
-    'lines-between-class-members': ['error', 'always'],
 
     /**
      *
@@ -48,6 +53,7 @@ module.exports = {
 
     'react-hooks/exhaustive-deps': 'off',
     'react/display-name': 'off',
+    'react/jsx-no-undef': ['off'],
 
     /**
      *
@@ -74,7 +80,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        usePrettierrc: true,
+        usePrettierrc: false,
         endOfLine: 'auto',
         printWidth: 80,
         tabWidth: 2,
